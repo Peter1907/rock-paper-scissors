@@ -21,9 +21,9 @@ function App() {
           src="./images/bg-triangle.svg"
           alt="background triangle"
         />
-        <Circle key={1} id='paper' />
-        <Circle key={2} id='scissors' />
-        <Circle key={3} id='rock' />
+        <Circle key={1} id="paper" />
+        <Circle key={2} id="scissors" />
+        <Circle key={3} id="rock" />
       </div>
       <Rules />
     </div>
