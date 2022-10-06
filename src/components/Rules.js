@@ -1,18 +1,13 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleDisplay } from '../redux/rules/rules';
 
 export default function Rules() {
-  const [state, setState] = useState({
-    visible: false,
-  });
+  const dispatch = useDispatch();
 
-  const style = {
-    display: state.visible ? 'block' : 'none',
-  };
+  const style = useSelector((state) => state.display);
 
   const changeDisplay = () => {
-    setState({
-      visible: !state.visible,
-    });
+    dispatch(toggleDisplay());
   };
 
   return (
