@@ -5,10 +5,10 @@ export default function scoreReducer(state = 0, action) {
   switch (action.type) {
     case INCREMENT:
       state += 1;
-      break;
+      return state;
     case RESET:
       state = 0;
-      break;
+      return state;
     default:
       return state;
   }
