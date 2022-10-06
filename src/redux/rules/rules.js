@@ -7,18 +7,17 @@ const initialState = {
 export default function displayReducer(state = initialState, action) {
   switch (action.type) {
     case TOGGLE:
-      state = {
+      return ({
         ...state,
         display: (state.display === 'none') ? 'block' : 'none',
-      };
-      return state;
+      });
     default:
       return state;
-  };
-};
+  }
+}
 
 const toggleDisplay = () => ({
-    type: TOGGLE,
+  type: TOGGLE,
 });
 
 export { toggleDisplay };
