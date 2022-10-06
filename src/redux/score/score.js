@@ -4,24 +4,22 @@ const RESET = 'redux/score/RESET';
 export default function scoreReducer(state = 0, action) {
   switch (action.type) {
     case INCREMENT:
-      return state += 1;
+      state += 1;
+      break;
     case RESET:
-      return state = 0;
+      state = 0;
+      break;
     default:
       return state;
-  };
-};
+  }
+}
 
-const increaseScore = () => {
-  return ({
+const increaseScore = () => ({
     type: INCREMENT,
-  });
-};
+});
 
-const resetScore = () => {
-  return ({
+const resetScore = () => ({
     type: RESET,
-  });
-};
+});
 
 export { increaseScore, resetScore };

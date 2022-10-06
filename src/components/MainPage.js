@@ -1,5 +1,5 @@
-import Circle from './Circle';
 import { v4 as uuid } from 'uuid';
+import Circle from './Circle';
 
 function Main() {
   const circlesStyle = {

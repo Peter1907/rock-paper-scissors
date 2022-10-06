@@ -6,9 +6,7 @@ export default function Rules() {
 
   const style = useSelector((state) => state.display);
 
-  const changeDisplay = () => {
-    dispatch(toggleDisplay());
-  };
+  const changeDisplay = () => dispatch(toggleDisplay());
 
   return (
     <section className="rules-container">
