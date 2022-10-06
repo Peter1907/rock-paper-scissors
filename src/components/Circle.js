@@ -5,7 +5,7 @@ export default function Circle({ id }) {
     borderRadius: '50%',
     width: '10rem',
     height: '10rem',
-    margin: '1rem 2.5rem',
+    margin: '1.2rem 2.5rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
