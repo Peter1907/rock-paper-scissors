@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Circle({ id }) {
   const circleStyle = {
     borderRadius: '50%',
@@ -12,10 +14,14 @@ export default function Circle({ id }) {
   };
 
   return (
-    <div className={`${id}-container`}  style={circleStyle}>
+    <div className={`${id}-container`} style={circleStyle}>
       <div className={id}>
         <img src={`./images/icon-${id}.svg`} alt={`${id} icon`} />
       </div>
     </div>
   );
+}
+
+Circle.propTypes = {
+  id: PropTypes.string.isRequired,
 };
