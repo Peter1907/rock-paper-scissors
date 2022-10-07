@@ -70,6 +70,7 @@ const getWinner = (playerOne, playerTwo) => {
       default:
     }
   }
+  return;
 };
 
 export default getWinner;

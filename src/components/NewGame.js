@@ -23,25 +23,24 @@ export default function NewGame() {
   const random = Math.floor(Math.random() * state.length);
   const [computerChoice] = useState(state[random]);
 
-  const update = () =>
-    new Promise((res) => {
-      setTimeout(() => {
-        setStyle({
-          opacity: 1,
-        });
-        setHolderStyle({
-          opacity: 0,
-        });
-        setResultStyle({
-          transform: 'scale(1)',
-          width: '100%',
-        });
-        setGameStyle({
-          gap: '3.5rem',
-        });
-        res();
-      }, 1500);
-    });
+  const update = () => new Promise((res) => {
+    setTimeout(() => {
+      setStyle({
+        opacity: 1,
+      });
+      setHolderStyle({
+        opacity: 0,
+      });
+      setResultStyle({
+        transform: 'scale(1)',
+        width: '100%',
+      });
+      setGameStyle({
+        gap: '3.5rem',
+      });
+      res();
+    }, 1500);
+  });
 
   const { name } = useParams();
 
@@ -59,7 +58,7 @@ export default function NewGame() {
   useEffect(() => {
     update();
     upadteScore();
-  }, [])
+  }, []);
 
   return (
     <section className="game" style={gameStyle}>
