@@ -1,8 +1,6 @@
 const getWinner = (playerOne, playerTwo) => {
   if (playerOne === 'rock') {
     switch (playerTwo) {
-      case 'rock':
-        return "IT'S A TIE";
       case 'paper':
         return 'YOU LOSE';
       case 'scissors':
@@ -17,8 +15,6 @@ const getWinner = (playerOne, playerTwo) => {
     switch (playerTwo) {
       case 'rock':
         return 'YOU WIN';
-      case 'paper':
-        return "IT'S A TIE";
       case 'scissors':
         return 'YOU LOSE';
       case 'lizard':
@@ -33,8 +29,6 @@ const getWinner = (playerOne, playerTwo) => {
         return 'YOU LOSE';
       case 'paper':
         return 'YOU WIN';
-      case 'scissors':
-        return "IT'S A TIE";
       case 'lizard':
         return 'YOU WIN';
       case 'spock':
@@ -49,8 +43,6 @@ const getWinner = (playerOne, playerTwo) => {
         return 'YOU WIN';
       case 'scissors':
         return 'YOU LOSE';
-      case 'lizard':
-        return "IT'S A TIE";
       case 'spock':
         return 'YOU WIN';
       default:
@@ -65,12 +57,11 @@ const getWinner = (playerOne, playerTwo) => {
         return 'YOU WIN';
       case 'lizard':
         return 'YOU LOSE';
-      case 'spock':
-        return "IT'S A TIE";
+
       default:
     }
   }
-  return undefined;
+  return "IT'S A TIE";
 };
 
 export default getWinner;
