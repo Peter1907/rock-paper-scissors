@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function Circle({ id }) {
+  const icon = require(`../images/icon-${id}.svg`);
   const circleStyle = {
     borderRadius: '50%',
     width: '10rem',
@@ -16,7 +17,7 @@ export default function Circle({ id }) {
   return (
     <div className={`${id}-container`} style={circleStyle}>
       <div className={id}>
-        <img src={require(`../images/icon-${id}.svg`)} alt={`${id} icon`} />
+        <img src={icon} alt={`${id} icon`} />
       </div>
     </div>
   );

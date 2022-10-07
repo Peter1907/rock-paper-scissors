@@ -3,8 +3,8 @@ const ADVANCED = 'redux/newGame/ADVANCED';
 
 const initialState = {
   basic: ['rock', 'paper', 'scissors'],
-  advanced: ['rock', 'paper', 'scissors', 'lizard', 'spock']
-}
+  advanced: ['rock', 'paper', 'scissors', 'lizard', 'spock'],
+};
 
 export default function gameReducer(state = [], action) {
   switch (action.type) {

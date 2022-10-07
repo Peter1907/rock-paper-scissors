@@ -5,7 +5,13 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1>ROCK<br />PAPER<br />SCISSORS</h1>
+      <h1>
+        ROCK
+        <br />
+        PAPER
+        <br />
+        SCISSORS
+      </h1>
       <div className="score-container">
         <p className="score-title">SCORE</p>
         <p className="score">{score}</p>

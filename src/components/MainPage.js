@@ -17,8 +17,8 @@ function Main() {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getBasic())
-  }, []);
+    dispatch(getBasic());
+  }, [dispatch]);
 
   const state = useSelector((state) => state.game);
 

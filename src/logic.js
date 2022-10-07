@@ -1,78 +1,73 @@
-const getWinner = (player_1, player_2) => {
-  if (player_1 === 'rock') {
-    switch (player_2) {
+const getWinner = (playerOne, playerTwo) => {
+  if (playerOne === 'rock') {
+    switch (playerTwo) {
       case 'rock':
         return "IT'S A TIE";
       case 'paper':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'scissors':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'lizard':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'spock':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       default:
-        return;
     }
-  } else if (player_1 === 'paper') {
-    switch (player_2) {
+  } else if (playerOne === 'paper') {
+    switch (playerTwo) {
       case 'rock':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'paper':
         return "IT'S A TIE";
       case 'scissors':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'lizard':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'spock':
-        return "YOU WIN";
+        return 'YOU WIN';
       default:
-        return;
     }
-  } else if (player_1 === 'scissors') {
-    switch (player_2) {
+  } else if (playerOne === 'scissors') {
+    switch (playerTwo) {
       case 'rock':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'paper':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'scissors':
         return "IT'S A TIE";
       case 'lizard':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'spock':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       default:
-        return;
     }
-  } else if (player_1 === 'lizard') {
-    switch (player_2) {
+  } else if (playerOne === 'lizard') {
+    switch (playerTwo) {
       case 'rock':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'paper':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'scissors':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'lizard':
         return "IT'S A TIE";
       case 'spock':
-        return "YOU WIN";
+        return 'YOU WIN';
       default:
-        return;
     }
-  } else if (player_1 === 'spock') {
-    switch (player_2) {
+  } else if (playerOne === 'spock') {
+    switch (playerTwo) {
       case 'rock':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'paper':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'scissors':
-        return "YOU WIN";
+        return 'YOU WIN';
       case 'lizard':
-        return "YOU LOSE";
+        return 'YOU LOSE';
       case 'spock':
         return "IT'S A TIE";
       default:
-        return;
     }
   }
 };

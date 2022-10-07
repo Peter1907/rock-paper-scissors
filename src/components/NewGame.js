@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -18,48 +19,47 @@ export default function NewGame() {
     transform: 'scale(0)',
   });
   const [header, setHeader] = useState('');
-  const state = useSelector((state) => state.game)
+  const state = useSelector((state) => state.game);
   const random = Math.floor(Math.random() * state.length);
   const [computerChoice] = useState(state[random]);
 
-  const update = () => {
-    return new Promise((res) => {
+  const update = () =>
+    new Promise((res) => {
       setTimeout(() => {
         setStyle({
           opacity: 1,
-        })
+        });
         setHolderStyle({
           opacity: 0,
-        })
+        });
         setResultStyle({
           transform: 'scale(1)',
           width: '100%',
-        })
+        });
         setGameStyle({
           gap: '3.5rem',
-        })
+        });
         res();
       }, 1500);
-    })
-  };
+    });
 
-  const dispatch  = useDispatch();
+  const { name } = useParams();
+
+  const dispatch = useDispatch();
   const upadteScore = () => {
     const winner = getWinner(name, computerChoice);
     setHeader(winner);
     setTimeout(() => {
       if (winner === 'YOU WIN') {
-      dispatch(increaseScore());
-    }
+        dispatch(increaseScore());
+      }
     }, 2000);
-  }
+  };
 
   useEffect(() => {
     update();
     upadteScore();
   }, [])
-  
-  const { name } = useParams();
 
   return (
     <section className="game" style={gameStyle}>
@@ -80,4 +80,4 @@ export default function NewGame() {
       </div>
     </section>
   );
-};
+}

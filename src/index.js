@@ -25,5 +25,5 @@ root.render(
       </Routes>
     </BrowserRouter>
     <Rules />
-  </Provider>
+  </Provider>,
 );
