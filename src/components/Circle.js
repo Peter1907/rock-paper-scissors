@@ -16,7 +16,7 @@ export default function Circle({ id }) {
   return (
     <div className={`${id}-container`} style={circleStyle}>
       <div className={id}>
-        <img src={`./images/icon-${id}.svg`} alt={`${id} icon`} />
+        <img src={require(`../images/icon-${id}.svg`)} alt={`${id} icon`} />
       </div>
     </div>
   );
