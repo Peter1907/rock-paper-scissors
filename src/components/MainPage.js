@@ -1,38 +1,37 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
-import { getBasic } from '../redux/newGame/newGame';
+import { getAdvanced, getBasic } from '../redux/newGame/newGame';
 import Circle from './Circle';
 
-function Main() {
-  const circlesStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto',
-    width: '50rem',
-    margin: '0 auto',
-    justifyContent: 'center',
-    position: 'relative',
-  };
-
+export default function Main() {
   const dispatch = useDispatch();
+  const mode = useSelector((state) => state.mode);
+
   useEffect(() => {
-    dispatch(getBasic());
-  }, [dispatch]);
+    if (mode === 'basic') {
+      dispatch(getBasic());
+    } else {
+      dispatch(getAdvanced());
+    }
+  }, [mode]);
 
-  const state = useSelector((state) => state.game);
-
+  const state = useSelector((state) => state.game.options || []);
+  const background = useSelector((state) => state.game.background);
+  const className = useSelector((state) => state.game.class);
   return (
-    <div className="container">
-      <div className="circles" style={circlesStyle}>
+    <div className={`${className} container`}>
+      <div className={`${className} circles`}>
         <img
-          className="triangle"
-          src="./images/bg-triangle.svg"
-          alt="background triangle"
+          className={`${className} background`}
+          src={background}
+          alt="background shape"
         />
         {state.map((element, index) => (
           <Link
-            className={`link-${index + 1}`}
+            className={`${className} link-${index + 1}`}
             key={uuid()}
             to={`NewGame/${element}`}
           >
@@ -43,5 +42,3 @@ function Main() {
     </div>
   );
 }
-
-export default Main;

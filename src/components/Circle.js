@@ -1,22 +1,13 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 export default function Circle({ id }) {
   const icon = (`../images/icon-${id}.svg`);
-  const circleStyle = {
-    borderRadius: '50%',
-    width: '10rem',
-    height: '10rem',
-    margin: '1.2rem 2.5rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f3f3f3',
-    color: 'navy',
-  };
+  const className = useSelector((state) => state.game.class);
 
   return (
-    <div className={`${id}-container`} style={circleStyle}>
-      <div className={id}>
+    <div className={`${className} ${id}-container`}>
+      <div className={`${className} ${id}`}>
         <img src={icon} alt={`${id} icon`} />
       </div>
     </div>
