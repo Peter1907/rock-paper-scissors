@@ -16,7 +16,7 @@ const ModeSelector = () => {
     >
       CHANGE MODE
     </button>
-  )
+  );
 };
 
 export default ModeSelector;

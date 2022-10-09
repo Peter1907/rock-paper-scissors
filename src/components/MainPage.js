@@ -9,9 +9,13 @@ import Circle from './Circle';
 export default function Main() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode);
-  
-  useEffect(() => {
+
+  const changeMode = () => {
     (mode === 'basic') ? dispatch(getBasic()) : dispatch(getAdvanced());
+  };
+
+  useEffect(() => {
+    changeMode();
   }, [mode]);
 
   const state = useSelector((state) => state.game.options || []);

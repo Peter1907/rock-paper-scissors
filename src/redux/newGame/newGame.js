@@ -21,9 +21,13 @@ const initialState = {
 export default function gameReducer(state = [], action) {
   switch (action.type) {
     case BASIC:
-      return ({...initialState.basic});
+      return ({
+        ...initialState.basic
+      });
     case ADVANCED:
-      return ({...initialState.advanced});
+      return ({
+        ...initialState.advanced
+      });
     default:
       return state;
   }
