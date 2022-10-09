@@ -10,12 +10,12 @@ export default function Main() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode);
 
-  const changeMode = () => {
-    (mode === 'basic') ? dispatch(getBasic()) : dispatch(getAdvanced());
-  };
-
   useEffect(() => {
-    changeMode();
+    if (mode === 'basic') {
+      dispatch(getBasic());
+    } else {
+      dispatch(getAdvanced());
+    }
   }, [mode]);
 
   const state = useSelector((state) => state.game.options || []);

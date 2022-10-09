@@ -22,11 +22,11 @@ export default function gameReducer(state = [], action) {
   switch (action.type) {
     case BASIC:
       return ({
-        ...initialState.basic
+        ...initialState.basic,
       });
     case ADVANCED:
       return ({
-        ...initialState.advanced
+        ...initialState.advanced,
       });
     default:
       return state;
