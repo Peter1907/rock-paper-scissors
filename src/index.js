@@ -7,12 +7,13 @@ import {
   Route,
 }
   from 'react-router-dom';
+import './index.css';
 import Header from './components/Header';
 import Main from './components/MainPage';
 import NewGame from './components/NewGame';
 import Rules from './components/Rules';
-import './index.css';
 import store from './redux/store';
+import ModeSelector from './components/ModeSelector';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,5 +26,6 @@ root.render(
       </Routes>
     </BrowserRouter>
     <Rules />
+    <ModeSelector />
   </Provider>,
 );

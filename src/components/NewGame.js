@@ -19,7 +19,7 @@ export default function NewGame() {
     transform: 'scale(0)',
   });
   const [header, setHeader] = useState('');
-  const state = useSelector((state) => state.game);
+  const state = useSelector((state) => state.game.options);
   const random = Math.floor(Math.random() * state.length);
   const [computerChoice] = useState(state[random]);
 

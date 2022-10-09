@@ -3,6 +3,7 @@ import { toggleDisplay } from '../redux/rules/rules';
 
 export default function Rules() {
   const dispatch = useDispatch();
+  const image = useSelector((state) => state.game.rules);
 
   const style = useSelector((state) => state.display);
 
@@ -16,7 +17,7 @@ export default function Rules() {
         <button type="button" className="close-btn" onClick={changeDisplay}>
           <img src="./images/icon-close.svg" alt="close sign" />
         </button>
-        <img src="./images/image-rules.svg" alt="rules img" />
+        <img src={image} alt="rules img" />
       </div>
       <div className="screen" style={style} />
     </section>
