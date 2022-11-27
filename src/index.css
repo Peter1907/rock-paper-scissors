@@ -232,7 +232,7 @@ body {
 .adv.lizard > img,
 .adv.spock > img {
   transform: scale(0.8);
-} 
+}
 
 .game .adv.rock,
 .game .adv.paper,
@@ -409,22 +409,22 @@ body {
     border-radius: 10px;
     margin: auto auto 2rem;
   }
-  
+
   .title {
     width: 6rem;
     font-size: 28px;
     line-height: 1.6rem;
   }
-  
+
   .score-container {
     padding: 0.5rem 1.8rem;
     border-radius: 5px;
   }
-  
+
   .score-title {
     letter-spacing: 2px;
   }
-  
+
   .score {
     font-size: 42px;
   }
@@ -467,7 +467,7 @@ body {
   .paper > img,
   .scissors > img {
     transform: scale(0.8);
-  } 
+  }
 
   .adv.rock,
   .adv.paper,
@@ -481,22 +481,22 @@ body {
   .rock-container {
     filter: drop-shadow(0 7px hsl(349, 71%, 40%));
   }
-  
+
   .paper-container {
     justify-self: center;
     filter: drop-shadow(0 7px hsl(230, 50%, 50%));
   }
-  
+
   .scissors-container {
     justify-self: center;
     filter: drop-shadow(0 7px hsl(39, 89%, 37%));
   }
-  
+
   .lizard-container {
     justify-self: center;
     filter: drop-shadow(0 7px hsl(261, 60%, 45%));
   }
-  
+
   .spock-container {
     justify-self: center;
     filter: drop-shadow(0 7px hsl(189, 59%, 40%));
