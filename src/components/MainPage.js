@@ -33,7 +33,7 @@ export default function Main() {
           <Link
             className={`${className} link-${index + 1}`}
             key={uuid()}
-            to={`NewGame/${element}`}
+            to={`/NewGame/${element}`}
           >
             <Circle id={element} />
           </Link>
