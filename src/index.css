@@ -576,8 +576,8 @@ body {
   .game .adv.scissors-container,
   .game .adv.lizard-container,
   .game .adv.spock-container {
-    transform: scale(0.75);
-    margin: 0.5rem;
+    transform: scale(0.7);
+    margin: 0 1rem;
   }
 
   .mobile-circles {
